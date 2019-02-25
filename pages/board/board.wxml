@@ -1,0 +1,74 @@
+<scroll-view class='container' scroll-y="true">
+
+  <!-- 1.轮播图-->
+  <view class='slide'>
+    <swiper indicator-dots='true' autoplay='true' interval='3000' duration='1000'>
+      <swiper-item wx:for="{{sliderData}}" wx:for-item="item">
+        <image src='{{item.large}}' mode='aspectFill'></image>
+      </swiper-item>
+    </swiper>
+  </view>
+  <!--2.电影信息  -->
+  <view class='board' scroll-y="true">
+    <!--正在上映  -->
+    <view class='board-item'>
+      <!--文字部分  -->
+      <view class='title'>
+        <text>正在上映</text>
+      </view>
+      <!--电影部分  -->
+      <scroll-view class='content' scroll-x="true">
+        <!--每个电影信息，需要点击此部分跳转到详情页，所以使用navigator标签进行包裹  -->
+        <view class='inner'>
+          <navigator class='movie-item' wx:for="{{moviesOn}}" wx:for-item="item" url='../detail/detail?id={{item.id}}'>
+
+            <!--电影海报  -->
+            <image src="{{item.large}}" mode='aspectFill'></image>
+            <!--电影名  -->
+            <text>{{item.title}}</text>
+          </navigator>
+        </view>
+      </scroll-view>
+    </view>
+    <!--即将上映  -->
+    <view class='board-item'>
+      <!--文字部分  -->
+      <view class='title'>
+        <text>即将上映</text>
+      </view>
+      <!--电影部分  -->
+      <scroll-view class='content' scroll-x="true">
+        <!--每个电影信息，需要点击此部分跳转到详情页，所以使用navigator标签进行包裹  -->
+        <view class='inner'>
+          <navigator class='movie-item' wx:for="{{moviesComing}}" wx:for-item="item" url='../detail/detail?id={{item.id}}'>
+
+            <!--电影海报  -->
+            <image src="{{item.large}}" mode='aspectFill'></image>
+            <!--电影名  -->
+            <text>{{item.title}}</text>
+          </navigator>
+        </view>
+      </scroll-view>
+    </view>
+    <!--top250  -->
+    <view class='board-item'>
+      <!--文字部分  -->
+      <view class='title'>
+        <text>top250</text>
+      </view>
+      <!--电影部分  -->
+      <scroll-view class='content' scroll-x="true">
+        <!--每个电影信息，需要点击此部分跳转到详情页，所以使用navigator标签进行包裹  -->
+        <view class='inner'>
+          <navigator class='movie-item' wx:for="{{moviesBest}}" wx:for-item="item" url='../detail/detail?id={{item.id}}'>
+
+            <!--电影海报  -->
+            <image src="{{item.large}}" mode='aspectFill'></image>
+            <!--电影名  -->
+            <text>{{item.title}}</text>
+          </navigator>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+</scroll-view>

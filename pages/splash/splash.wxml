@@ -1,0 +1,14 @@
+<!--pages/splash/splash.wxml-->
+<view class='container'>
+  <swiper class='splash' indicator-dots='true' autoplay='true' circular='true' interval='3000' duration='1000'>
+    <swiper-item wx:for="{{splash}}" wx:for-item="item">
+      <!--
+    aspectFill 保持图片的宽高比不会变形（保持纵横比缩放图片）
+    sacleToFill 会改变图片的宽高比（不保持纵横比拉伸图片）
+    -->
+      <image src="{{item.large}}" mode='aspectFill' ></image>
+      <!-- wx:if 条件渲染，条件为true时，渲染该组件-->
+       <button class='start' bindtap='handleStart' wx:if="{{index == splash.length-1}}">立即体验</button> 
+    </swiper-item>
+  </swiper>
+</view>

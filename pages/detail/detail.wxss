@@ -1,0 +1,50 @@
+/* pages/detail/detail.wxss */
+/*非摘要部分  */
+.meta{
+  display: flex;
+  flex-direction: column;
+  /*使内容位于容器中心  */
+  align-items: center;
+  padding: 50rpx 40rpx;
+}
+.poster{
+  width: 100%;
+  height: 800rpx;
+  margin: 20rpx;
+}
+.title{
+  font-size: 42rpx;
+  color: #444;
+}
+.info{
+  font-size: 24rpx;
+  color: #888;
+  margin-top: 20rpx;
+  width: 80%;
+}
+/*摘要部分  */
+.summary{
+  width: 80%;
+  margin: 30rpx auto;
+}
+.label{
+  display: block;
+  font-size: 30rpx;
+  margin-bottom: 30rpx;
+}
+.content{
+  color: #666;
+  font-size: 22rpx;
+}
+/*背景图片  */
+.background{
+  /*相对于屏幕进行定位  */
+  position: fixed;
+  height: 100%;
+  width: 100%;
+
+  /*设置透明度，值越小，透明度越高  */
+  opacity: 0.1;
+  /*堆叠顺序：拥有高堆叠顺序的元素总会处于低堆叠顺序元素的前面  */
+  z-index: -1;
+}

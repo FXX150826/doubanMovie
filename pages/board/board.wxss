@@ -1,0 +1,49 @@
+/* pages/board/board.wxss */
+
+/*rpx:微信小程序中长度单位，可以根据图片高度自适应  */
+.slide swiper{
+  height: 380rpx;
+}
+.slide swiper image{
+  height: 380rpx;
+  width: 750rpx;
+}
+/*电影信息  */
+.board{
+  /*此元素的内边距和边框都不会增加它的范围（宽度和高度）  */
+  box-sizing: border-box;
+  background-color: #f6f6f6;
+}
+.board-item{
+  font-size: 20rpx;
+  margin: 20rpx 0;
+  padding: 10rpx;
+}
+.title{
+  width: 100%;
+  font-size: 16px;
+  margin-bottom: 10rpx;
+}
+.content{
+  height: 300rpx;
+}
+.inner{
+  display: flex;
+  flex-direction: row;
+  height: 300rpx;
+  width: 900rpx;
+}
+.movie-item{
+  margin: 10rpx;
+}
+.movie-item image{
+  width:180rpx;
+  height: 250rpx;
+}
+.movie-item text{
+  text-align: center;
+  font-size: 14px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

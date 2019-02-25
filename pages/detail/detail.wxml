@@ -1,0 +1,30 @@
+<!--pages/detail/detail.wxml-->
+<view class='container'>
+  <!--设置加载动画  -->
+  <loading hidden="{{hidden}}">loading...</loading>
+  <!--背景图片-->
+  <image class='background' src="{{movieDetail.imageUrl}}" mode='aspectFill'></image>
+  <!--详情页  -->
+  <scroll-view class='container' scroll-y="true">
+    <!--非摘要部分  -->
+    <view class='meta'>
+      <!--电影封面  aspectFit:在保证长宽比的前提下，使图片在容器中完整的展现出来-->
+      <image class='poster' src="{{movieDetail.imageUrl}}" mode='aspectFit'></image>
+      <!--电影名和上映时间  -->
+      <text class='title'>{{movieDetail.movName}}({{movieDetail.year}})</text>
+      <!--评分  -->
+      <text class='info'>评分：{{movieDetail.score}}</text>
+      <!--导演  -->
+      <text class='info'>导演：{{movieDetail.direct}}</text>
+      <!--主演  -->
+      <text class='info'>主演：{{movieDetail.actor}}</text>
+    </view>
+
+    <!--摘要部分  -->
+    <view class='summary'>
+      <text class='label'>摘要：</text>
+      <text class='content'>{{movieDetail.summary}}</text>
+    </view>
+
+  </scroll-view>
+</view>
